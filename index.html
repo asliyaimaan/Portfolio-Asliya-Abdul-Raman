@@ -56,13 +56,14 @@
             /* Homepage Banner */
             #homepage-banner{
                 background:linear-gradient(to bottom, #082C7F, #381d51);
-                height: 90vh;
+                min-height: 90vh;          /* NOT height */
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 margin-top: 78px;
-                gap:40px;
+                gap:30px;
+                padding: 120px 80px 60px;
             }
 
             #homepage-banner h1{
@@ -74,6 +75,9 @@
             .banner-up{
                 display:flex;
                 gap:80px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
             }
 
             .banner-img {
@@ -333,15 +337,21 @@
 
             /* Responsive */
             @media (max-width: 1024px) {
+                #homepage-banner {
+                    padding: 120px 40px 60px;
+                }
+
                 #homepage-banner h1 {
                     font-size: 60px;
                 }
+
                 .job-title {
                     font-size: 40px;
                 }
+
                 .bio {
-                    padding: 20px 40px;
                     font-size: 22px;
+                    padding: 20px;
                 }
             }
 
@@ -360,9 +370,20 @@
                 }
 
                 #homepage-banner {
+                    padding: 100px 20px 40px;
                     margin-top: 120px;
                     height: auto;
-                    padding: 60px 20px;
+                }
+
+                .banner-up {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                .banner-img {
+                    width: 220px;
+                    height: 220px;
                 }
 
                 #homepage-banner h1 {
@@ -410,6 +431,19 @@
                 #homepage-banner {
                     margin-top: 0; 
                     padding-top: 120px;
+                }
+
+                .banner-img {
+                    width: 220px;
+                    height: 220px;
+                }
+
+                #homepage-banner h1 {
+                    font-size: 50px;
+                }
+
+                .job-title {
+                    font-size: 32px;
                 }
             }
 
@@ -489,7 +523,7 @@
                 </div>
 
                 <div class="banner-img">
-                    <img src="images\linkedinPFP.jpeg">
+                    <img src="images/linkedinPFP.jpeg">
                 </div>
             </div>
 
