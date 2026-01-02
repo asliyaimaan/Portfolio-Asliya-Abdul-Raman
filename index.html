@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
-<lang="en">
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Manrope:wght@200..800&family=Pixelify+Sans:wght@400..700&family=Righteous&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
         <style>
             *{
@@ -171,13 +170,25 @@
             }
 
             /*Projects*/
-            .project-container{
+            .project-swiper {
+                width: 100%;
+                padding: 40px 60px;
+            }
+
+            .swiper-slide {
                 display: flex;
+                justify-content: center;
             }
 
             .project{
-                margin:30px 60px;
-                padding:30px 50px;
+                width: 100%;
+                max-width: 350px;      /* SAME width */
+                min-height: 300px;     /* SAME height */
+                margin: 0;
+                padding: 30px 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 font-family: "Manrope", sans-serif;
                 background: linear-gradient(to right, #113487, #502b72);
                 border-radius: 50px;
@@ -495,6 +506,25 @@
                     font-size: 18px;
                 }
             }
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: aqua;   
+            }
+
+            .swiper-button-next:hover,
+            .swiper-button-prev:hover {
+                color: #ff14d4;
+            }
+
+            .swiper-pagination-bullet {
+                background: aqua;
+                opacity: 0.6;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: #ff14d4;
+                opacity: 1;
+            }
         </style>
     </head>
     <body>
@@ -541,34 +571,73 @@
         <section id="projects">
             <h2 class="gradient-text">My Projects</h2>
 
-            <div class="project-container">
-                <div class="project">
-                    <h3 class="project-title">Animal Adoption Center Website</h3>
+            <div class="swiper project-swiper">
+                <div class="swiper-wrapper">
 
-                    <p>This is a website I made during my first year of university where I used technologies 
-                        I had just learned such as HTML, CSS, Javascript, Jquery, PHP and Ajax.
-                    </p>
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <h3 class="project-title">Animal Adoption Center Website</h3>
+                            <p>
+                                This is a website I made during my first year of university where I used technologies 
+                                I had just learned such as HTML, CSS, Javascript, Jquery, PHP and Ajax.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <h3 class="project-title">E-Commerce Clothing Website</h3>
+                            <p>
+                                I had implemented this website during my second year at university where I was more 
+                                familiar with web technologies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <h3 class="project-title">OOP Mini-Game</h3>
+                            <p>
+                                This is a mini-game I created using Object-Oriented Programming (OOP) concepts in 
+                                Python together with a UI created with ktinker.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <h3 class="project-title">Funfact Generator</h3>
+                            <p>
+                                This is a website I made during my first year of university where I used technologies 
+                                I had just learned such as HTML, CSS, Javascript, Jquery, PHP and Ajax.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <h3 class="project-title">Surfcamp Website</h3>
+                            <p>
+                                I had implemented this website during my second year at university where I was more 
+                                familiar with web technologies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project">
+                            <h3 class="project-title">E-commerce Strapi Website</h3>
+                            <p>
+                                This is a mini-game I created using Object-Oriented Programming (OOP) concepts in Python.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="project">
-                    <h3 class="project-title">E-Commerce Clothing Website</h3>
-                    
-                    <p>I had implemented this website during my second year at university where I was more 
-                        familiar with web technologies. I still used the same technologies as the previous 
-                        one but I have also incorporated new technologies. 
-                    </p>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">OOP Mini-Game</h3>
-
-                    <p>
-                        This is a mini-game I created using Object-Oriented Programming (OOP) concepts in 
-                        Python during my first year at university.
-                    </p>
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-
         </section>
 
         <section id="education">
@@ -662,5 +731,7 @@
             </div>
 
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="swiper.js"></script>
     </body>
 </html>
